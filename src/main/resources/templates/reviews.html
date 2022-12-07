@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <table data-th-each="boardGame:${boardGames}">
+            <tr>Review for: <span data-th-text="${boardGame.name}"></span></tr><br>
+            <div data-th-each="comment:${boardGame.gameComments}">
+                <tr>User: <span data-th-text="${comment.user}"></span></tr><br>
+                <tr>Rating: <span data-th-text="${comment.rating}"></span></tr><br>
+                <tr>Review: <span data-th-text="${comment.text}"></span></tr><br>
+                <br><br>
+            </div>
+        </table>
+        <h4>Hope you had fun! Search again <a href="/">here</a></h4>
+    </body>
+</html>
